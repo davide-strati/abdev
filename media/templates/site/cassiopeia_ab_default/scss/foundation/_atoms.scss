@@ -1,0 +1,9 @@
+// ---> Images
+
+// -> Pictures
+// + Image cover all the space +
+picture.image-cover img {
+    object-fit: cover; 
+       height: 100%;
+       width:100%;
+   }

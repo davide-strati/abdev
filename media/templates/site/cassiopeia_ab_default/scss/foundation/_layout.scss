@@ -1,0 +1,114 @@
+@use 'typo' as t;
+
+// !!!! Responsive Variables in _variables.scss
+
+
+// ---> Header
+.header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: none;
+    background-color: transparent;
+    z-index: 100;
+
+    // --> Header Grid
+    .u-grid {
+        grid-template-rows: 1fr;
+        padding: var(--space-s) 0;
+    }
+    // -> Header Grid Elements    
+    .navbar-brand {
+        grid-column: 2 / span 8;
+        padding: 0;        
+    }
+    .container-nav {
+        grid-column: span 4;
+        display: flex;
+        justify-content: end;
+        nav {
+            margin-top: 0;
+            justify-content: end;
+        }
+    }
+    // -> Logo
+    .brand-logo img {
+        display: block;
+        max-height: var(--header-logo-height);
+    }
+    // -> Menu Collapsed
+    .navbar-toggler, .navbar-toggler:focus {
+        color: t.$heading-text-color;        
+        border: none;
+        box-shadow: none;
+    }
+    .icon-menu:before {
+        font-size: var(--step-6);
+    }
+
+    .navbar-collapse.show {
+        position: fixed;
+        top: 10vh;
+        left: 0;
+        width: 100vw;
+        height: auto;
+        align-items: flex-start;
+        margin-top: 1em;
+        padding: var(--space-m) 0;
+        background: radial-gradient(117.18% 85.73% at 0% -8.7%, #494F69 0%, #33354C 0%, #1D1E30 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;;
+        .mod-menu {            
+            li {
+                color: var(--gray-700);
+                font-family: t.$heading-regular;
+                font-size: var(--step-2);
+                letter-spacing: t.$body-ls;
+                text-transform: uppercase;
+                justify-content: center;
+                &.active a {
+                    color: var(--primary-500);
+                    text-decoration: none;
+
+                }
+            }
+        }
+    }
+
+
+}
+
+
+.site-grid, .u-grid {
+    grid-gap: 0 var(--grid-gutter);
+    grid-template-columns: [full-start] minmax(0,1fr) [main-start] repeat(12,minmax(0,60px)) [main-end] minmax(0,1fr) [full-end];
+    .container-component {
+        grid-column: main-start / span 8;
+    }
+    .container-sidebar-right {
+        grid-column: 14 / 10;
+    }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+        // -> Header Grid Elements    
+        .navbar-brand {
+            grid-column: 2 / span 3 !important;
+        }
+        .container-nav, .navbar, .navbar-collapse {
+            align-items: stretch;
+        }
+        .container-nav {
+            grid-column: span 10 !important;
+            .mod-menu {
+                align-items: flex-end;
+                li {
+                    color: t.$heading-text-color;
+                    font-family: t.$heading-extrabold;
+                    text-transform: uppercase;
+                    padding: 0 1em;
+                }
+            }
+        }
+}

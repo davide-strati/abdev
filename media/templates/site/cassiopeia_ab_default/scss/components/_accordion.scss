@@ -1,0 +1,24 @@
+@use '../foundation/typo' as t;
+
+.accordion-button {
+    gap: var(--space-s);
+    font-size: var(--step-0);
+    font-family: t.$heading-extrabold;
+}   
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--primary-500) ;
+}
+
+
+// ---> Accordion Servizi 
+
+.accordion-header__icon, .accordion-button svg {
+    flex: 0 0 var(--space-m);
+    height: var(--space-m);
+
+    &.icon--progetto {
+        background-image: url('/images/icons/servizi/gray/progetto.svg');
+    }
+}

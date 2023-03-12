@@ -1,0 +1,133 @@
+/* ---------- COLORS --------------- */
+
+
+/* Color styles */
+:root {
+  --primary-100: rgba(68, 112, 0, 1);
+  --primary-900: rgba(251, 255, 227, 1);
+  --primary-800: rgba(242, 253, 171, 1);
+  --primary-700: rgba(233, 251, 116, 1);
+  --primary-600: rgba(222, 247, 63, 1);
+  --primary-500: rgba(211, 242, 10, 1);
+  --primary-400: rgba(174, 219, 0, 1);
+  --primary-300: rgba(137, 184, 0, 1);
+  --primary-200: rgba(101, 148, 0, 1);
+  --gray-100: rgba(4, 5, 23, 1);
+  --gray-200: rgba(29, 30, 48, 1);
+  --gray-300: rgba(51, 53, 76, 1);
+  --gray-400: rgba(73, 79, 105, 1);
+  --gray-500: rgba(95, 104, 135, 1);
+  --gray-600: rgba(120, 131, 160, 1);
+  --gray-700: rgba(150, 161, 182, 1);
+  --gray-800: rgba(179, 187, 204, 1);
+  --gray-900: rgba(208, 214, 228, 1);
+  --gray-1000: rgba(234, 241, 255, 1);
+  --alert: rgba(213, 62, 61, 1);
+  --warning: rgba(231, 151, 30, 1);
+  --black: rgba(0, 0, 0, 1);
+  --white: rgba(255, 255, 255, 1);
+  --success: rgba(97, 170, 60, 1);
+  --dark-text: rgba(51, 53, 76, 1);
+  --light-text: rgba(255, 255, 255, 1);
+}
+
+// Bootstrap overrides
+$primary:       var(--primary-300) !default;
+$primary-hover: var(--primary-400) !default;
+$secondary:     var(--gray-700) !default;
+$success:       var(--success) !default;
+$warning:       var(--warning) !default;
+$danger:        var(--alert) !default;
+$light:         var(--gray-800) !default;
+$dark:          var(--gray-200) !default;
+
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ------------------------------------------- UTOPIA -------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+// ---> Variable Font sizes
+/* @link https://utopia.fyi/type/calculator?c=320,14,1.2,1240,20,1.25,8,2,&s=0.75|0.5|0.25,1.25|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --step--2: clamp(0.61rem, calc(0.54rem + 0.33vw), 0.80rem);
+  --step--1: clamp(0.73rem, calc(0.64rem + 0.47vw), 1.00rem);
+  --step-0: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
+  --step-1: clamp(1.05rem, calc(0.87rem + 0.89vw), 1.56rem);
+  --step-2: clamp(1.26rem, calc(1.02rem + 1.21vw), 1.95rem);
+  --step-3: clamp(1.51rem, calc(1.19rem + 1.62vw), 2.44rem);
+  --step-4: clamp(1.81rem, calc(1.38rem + 2.15vw), 3.05rem);
+  --step-5: clamp(2.18rem, calc(1.61rem + 2.85vw), 3.82rem);
+  --step-6: clamp(2.61rem, calc(1.86rem + 3.75vw), 4.77rem);
+  --step-7: clamp(3.14rem, calc(2.15rem + 4.91vw), 5.96rem);
+  --step-8: clamp(3.76rem, calc(2.48rem + 6.41vw), 7.45rem);
+}
+
+// ---> Variable Spaces
+/* @link https://utopia.fyi/space/calculator?c=320,14,1.2,1240,20,1.25,8,2,&s=0.75|0.5|0.25,1.25|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --space-3xs: clamp(0.25rem, calc(0.23rem + 0.11vw), 0.31rem);
+  --space-2xs: clamp(0.44rem, calc(0.37rem + 0.33vw), 0.63rem);
+  --space-xs: clamp(0.69rem, calc(0.60rem + 0.43vw), 0.94rem);
+  --space-s: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
+  --space-m: clamp(1.13rem, calc(0.97rem + 0.76vw), 1.56rem);
+  --space-l: clamp(1.75rem, calc(1.49rem + 1.30vw), 2.50rem);
+  --space-xl: clamp(2.63rem, calc(2.23rem + 1.96vw), 3.75rem);
+  --space-2xl: clamp(3.50rem, calc(2.98rem + 2.61vw), 5.00rem);
+  --space-3xl: clamp(5.25rem, calc(4.47rem + 3.91vw), 7.50rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, calc(0.12rem + 0.65vw), 0.63rem);
+  --space-2xs-xs: clamp(0.44rem, calc(0.26rem + 0.87vw), 0.94rem);
+  --space-xs-s: clamp(0.69rem, calc(0.49rem + 0.98vw), 1.25rem);
+  --space-s-m: clamp(0.88rem, calc(0.64rem + 1.20vw), 1.56rem);
+  --space-m-l: clamp(1.13rem, calc(0.65rem + 2.39vw), 2.50rem);
+  --space-l-xl: clamp(1.75rem, calc(1.05rem + 3.48vw), 3.75rem);
+  --space-xl-2xl: clamp(2.63rem, calc(1.80rem + 4.13vw), 5.00rem);
+  --space-2xl-3xl: clamp(3.50rem, calc(2.11rem + 6.96vw), 7.50rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(0.88rem, calc(0.31rem + 2.83vw), 2.50rem);
+}
+
+// ---> Grid
+/* @link https://utopia.fyi/grid/calculator?c=320,14,1.2,1240,20,1.25,8,2,&s=0.75|0.5|0.25,1.25|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --grid-max-width: 77.50rem;
+  --grid-gutter: var(--space-s-l, clamp(0.88rem, calc(0.31rem + 2.83vw), 2.50rem));
+  --grid-columns: 12;
+}
+
+.u-container {
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+
+.u-grid {
+  display: grid;
+  gap: var(--grid-gutter);
+  max-width: var(--grid-max-width);
+  margin: 0 auto;
+  grid-template-columns: [full-start] minmax(0,1fr) [main-start] repeat(12,minmax(0,60px)) [main-end] minmax(0,1fr) [full-end];
+}
+
+// ---> Layout
+:root {
+  --header-logo-height: 50px;
+  --header-height: calc(var(--header-logo-height) + (var(--space-s) * 2));
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+  :root {
+    // -> Layout / Header
+      --header-logo-height: 70px;
+  }
+
+}

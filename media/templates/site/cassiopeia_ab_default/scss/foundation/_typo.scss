@@ -1,0 +1,189 @@
+@use 'variables' as v;
+
+
+// ---> Font Families
+// -> Font Families - Heading
+
+@font-face {
+    font-family: 'nunito_sansblack';
+    src: url('../font/nunito/nunitosans-black-webfont.woff2') format('woff2'),
+         url('../font/nunito/nunitosans-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nunito_sansextrabold';
+    src: url('../font/nunito/nunitosans-extrabold-webfont.woff2') format('woff2'),
+         url('../font/nunito/nunitosans-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nunito_sansregular';
+    src: url('../font/nunito/nunitosans-regular-webfont.woff2') format('woff2'),
+         url('../font/nunito/nunitosans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// -> Font Families  -  Body
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../font/roboto/roboto-bold-webfont.woff2') format('woff2'),
+         url('../font/roboto/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../font/roboto/roboto-regular-webfont.woff2') format('woff2'),
+         url('../font/roboto/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../font/roboto/roboto-light-webfont.woff2') format('woff2'),
+         url('../font/roboto/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// ---> Variables: font size, vertical rythm, horizzontal rythm, space
+
+// -> HEADINGS
+$heading-regular: 'nunito_sansregular';
+$heading-extrabold: 'nunito_sansextrabold';
+$heading-black: 'nunito_sansblack';
+
+$heading-text-color: var(--gray-300);
+$heading-lh: 1.12em;
+
+$heading-mb: var(--space-m);
+$heading-mt: var(--space-xl);
+$heading-mt-sm: var(--space-l);
+
+// -> BODY
+$body-regular: 'robotoregular';
+$body-bold: 'robotobold';
+
+$body-text-color: var(--gray-600);
+$body-lh: 1.6em;
+$body-ls: 0.01em;
+
+
+
+// ---> Sizes
+.display-1 {
+    color: $heading-text-color;
+    font-family: $heading-black !important;
+    font-size: var(--step-8) !important;
+    line-height: $heading-lh;
+    margin-bottom: $heading-mb;
+    margin-top: $heading-mt;
+}
+.display-2 {
+    color: $heading-text-color;
+    font-family: $heading-black !important;
+    font-size: var(--step-7) !important;
+    line-height: $heading-lh;
+    margin-bottom: $heading-mb;
+    margin-top: $heading-mt;
+}
+.display-3 {
+    color: $heading-text-color;
+    font-family: $heading-black !important;
+    font-size: var(--step-6) !important;
+    line-height: $heading-lh;
+    margin-bottom: $heading-mb;
+    margin-top: $heading-mt;
+}
+h1, .heading-1 {
+    color: $heading-text-color;
+    font-family: $heading-black !important;
+    font-size: var(--step-5) !important;
+    line-height: $heading-lh;
+    margin-bottom: var(--space-xl);
+    margin-top: var(--space-2xl);
+}
+h2, .heading-2 {
+    color: $heading-text-color;
+    font-family: $heading-black !important;
+    font-size: var(--step-4) !important;
+    line-height: $heading-lh;
+    margin-bottom: $heading-mb;
+    margin-top: $heading-mt;
+}
+h3, .heading-3 {
+    color: $heading-text-color;
+    font-family: $heading-extrabold !important;
+    font-size: var(--step-3) !important;
+    line-height: $heading-lh;
+    margin-bottom: $heading-mb;
+    margin-top: $heading-mt;
+}
+h4, .heading-4 {
+    color: $heading-text-color;
+    font-family: $heading-extrabold !important;
+    font-size: var(--step-2) !important;
+    line-height: $heading-lh;
+    margin-bottom: $heading-mb;
+    margin-top: $heading-mt-sm;
+}
+h5, .heading-5 {
+    color: $heading-text-color;
+    font-family: $body-bold !important;
+    font-size: var(--step-1) !important;
+    line-height: $heading-lh;
+    margin-bottom: $heading-mb;
+    margin-top: $heading-mt-sm;
+}
+body, p {
+    color: $body-text-color;
+    font-family: $body-regular;
+    font-size: var(--step-0) !important;
+    line-height: $body-lh;
+    
+}
+
+p {
+    letter-spacing: $body-ls;
+}
+
+strong, .p--bold {
+    font-family: $body-bold;
+}
+
+a {
+    color: v.$primary;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;   
+    &:hover {
+        color: v.$primary-hover;        
+        text-decoration: none !important;
+    }
+}
+
+// Link inside a paragraph, inline link
+p a {
+    border-bottom: 1px solid var(--primary-500);
+    &:hover {
+        border-bottom: 1px solid var(--primary-400);
+    }
+}
+
+// --> Weight
+
+// ---> Layout
+

@@ -1,0 +1,51 @@
+@use '../../cassiopeia_ab_default/scss/foundation'; 
+@use '../../cassiopeia_ab_default/scss/components/banner'; 
+@use '../../cassiopeia_ab_default/scss/components/accordion'; 
+
+
+// ---> Banner
+.hero--home-page {
+    height: calc(54vh + var(--header-height));
+    .hero__title {
+        margin-bottom: 0;
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    // ---> Banner
+    .hero--home-page {
+        .hero__title, .hero__subtitle {text-align: left;}
+    }
+}
+@media screen and (min-width: 768px) {
+    // ---> Banner
+    .hero--home-page {
+        height: calc(65vh + var(--header-height));
+        .hero__title {
+            max-width: 60%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    // ---> Banner
+    .hero--home-page {
+        height: calc(75vh + var(--header-height));
+        .hero__title {
+            max-width: 60%;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    // ---> Banner
+    .hero--home-page {
+        height: calc(80vh + var(--header-height));;
+    }
+}
+
+// -> Pictures
+
+
+// + Image cover all the space +
