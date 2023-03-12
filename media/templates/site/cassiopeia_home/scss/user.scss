@@ -105,8 +105,12 @@
     flex-flow: column;
 }
 
-
-
+// ---> Counters Module
+.module--counter {
+    h3 {
+        color: var(--gray-600);
+    }
+}
 
 @media screen and (min-width: 600px) {
 
