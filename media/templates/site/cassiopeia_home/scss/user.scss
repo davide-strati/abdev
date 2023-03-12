@@ -16,13 +16,15 @@
 
 // ---> Target
 .target {
+    padding: f.$section-padding-bottom 0;
+
+    
     background-color: var(--gray-200);
     background-size: cover;
 
 
     // Layout
     .u-grid {
-        margin: var(--space-xl) auto;
         grid-auto-rows: min-content;
         backdrop-filter: blur(10px);
     }
@@ -105,10 +107,59 @@
     flex-flow: column;
 }
 
+
+// ---> vantaggi
+
+.pg--home {
+    .container-component {
+        padding-top: f.$section-padding-top;
+        padding-bottom: var(--space-l);
+        grid-column: 2 / 14;
+    }
+    .article__title h2 {
+        margin-top: 0;
+    }
+}
+
+.lista--vantaggi {
+    padding-left: 0;
+    .list-item__title {
+        img {display: none;}
+    }
+}
+
 // ---> Counters Module
+.pg--home {
+    .container-sidebar-right {
+        grid-column: 2/14;
+        padding-bottom: f.$section-padding-bottom;
+
+    }
+}
+
 .module--counter {
+    .card-body {
+        padding: 0 var(--space-l);
+    }
     h3 {
         color: var(--gray-600);
+        margin: 0 0 var(--space-xs) 0;
+    }
+}
+
+
+// ---> CTA
+
+.container-bottom-a {
+    background-image: url('/images/backgrounds/bg-cta.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: f.$section-padding-top 0;
+    .custom {
+        grid-column: 2 / 14;
+    }
+    h3 {
+        margin-top: 0;
     }
 }
 
@@ -157,6 +208,13 @@
         }
 
     }
+
+    // ---> Counters 
+    .module--counter {
+        .counter {
+            flex: 1 0 50%;
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -167,6 +225,33 @@
 
         .hero__title {
             max-width: 60%;
+        }
+    }
+
+    // ---> MAIN CONTENT
+    .pg--home {
+        .container-component {
+            grid-column: 2/10;
+            padding: f.$section-padding-top 0;
+        }
+        .container-sidebar-right {
+            grid-column: 10/14;
+            padding: f.$section-padding-top 0;
+            .module--counter {
+                .counter {
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    }
+    // ---> CTA Container 
+    .cta__container {
+        gap: var(--space-l);
+        .cta__content {
+            flex: 2 1 0;
+        }
+        .cta__contacts {
+            flex: 1 0 0;
         }
     }
 }

@@ -1,9 +1,24 @@
+@use 'typo' as t;
+@use 'variables' as v;
+
 // ---> Images
 
 // -> Pictures
 // + Image cover all the space +
 picture.image-cover img {
-    object-fit: cover; 
-       height: 100%;
-       width:100%;
-   }
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+// --> BUTTONS
+
+.btn {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: v.$button-padding-y v.$button-padding-x;
+
+    font-family: t.$heading-extrabold;
+}
