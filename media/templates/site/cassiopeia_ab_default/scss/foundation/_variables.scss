@@ -41,6 +41,10 @@ $danger:        var(--alert) !default;
 $light:         var(--gray-800) !default;
 $dark:          var(--gray-200) !default;
 
+// Gradients
+$grad-green-light: radial-gradient(117.18% 85.73% at 0% -8.7%, #E9FB74 0%, #D3F20A 100%);
+$grd-gray-dark:  radial-gradient(117.18% 85.73% at 0% -8.7%, #494F69 0%, #33354C 0%, #1D1E30 100%);
+
 
 
 /* ----------------------------------------------------------------------------------------------- */
@@ -51,17 +55,17 @@ $dark:          var(--gray-200) !default;
 /* @link https://utopia.fyi/type/calculator?c=320,14,1.2,1240,20,1.25,8,2,&s=0.75|0.5|0.25,1.25|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-  --step--2: clamp(0.61rem, calc(0.54rem + 0.33vw), 0.80rem);
-  --step--1: clamp(0.73rem, calc(0.64rem + 0.47vw), 1.00rem);
-  --step-0: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
-  --step-1: clamp(1.05rem, calc(0.87rem + 0.89vw), 1.56rem);
-  --step-2: clamp(1.26rem, calc(1.02rem + 1.21vw), 1.95rem);
-  --step-3: clamp(1.51rem, calc(1.19rem + 1.62vw), 2.44rem);
-  --step-4: clamp(1.81rem, calc(1.38rem + 2.15vw), 3.05rem);
-  --step-5: clamp(2.18rem, calc(1.61rem + 2.85vw), 3.82rem);
-  --step-6: clamp(2.61rem, calc(1.86rem + 3.75vw), 4.77rem);
-  --step-7: clamp(3.14rem, calc(2.15rem + 4.91vw), 5.96rem);
-  --step-8: clamp(3.76rem, calc(2.48rem + 6.41vw), 7.45rem);
+  --step--2: clamp(0.61rem, calc(0.56rem + 0.24vw), 0.80rem);
+  --step--1: clamp(0.73rem, calc(0.66rem + 0.34vw), 1.00rem);
+  --step-0: clamp(0.88rem, calc(0.78rem + 0.47vw), 1.25rem);
+  --step-1: clamp(1.05rem, calc(0.92rem + 0.64vw), 1.56rem);
+  --step-2: clamp(1.26rem, calc(1.09rem + 0.87vw), 1.95rem);
+  --step-3: clamp(1.51rem, calc(1.28rem + 1.16vw), 2.44rem);
+  --step-4: clamp(1.81rem, calc(1.51rem + 1.55vw), 3.05rem);
+  --step-5: clamp(2.18rem, calc(1.77rem + 2.05vw), 3.82rem);
+  --step-6: clamp(2.61rem, calc(2.07rem + 2.69vw), 4.77rem);
+  --step-7: clamp(3.14rem, calc(2.43rem + 3.53vw), 5.96rem);
+  --step-8: clamp(3.76rem, calc(2.84rem + 4.61vw), 7.45rem);
 }
 
 // ---> Variable Spaces
@@ -113,6 +117,10 @@ $dark:          var(--gray-200) !default;
   max-width: var(--grid-max-width);
   margin: 0 auto;
   grid-template-columns: [full-start] minmax(0,1fr) [main-start] repeat(12,minmax(0,60px)) [main-end] minmax(0,1fr) [full-end];
+}
+
+.bg--dark {
+  background: $grd-gray-dark;
 }
 
 // ---> Layout

@@ -75,10 +75,10 @@ $heading-mt: var(--space-xl);
 $heading-mt-sm: var(--space-l);
 
 // -> BODY
-$body-regular: 'robotoregular';
+$body-regular: 'robotolight';
 $body-bold: 'robotobold';
 
-$body-text-color: var(--gray-600);
+$body-text-color: var(--gray-400);
 $body-lh: 1.6em;
 $body-ls: 0.01em;
 
@@ -157,6 +157,10 @@ body, p {
     
 }
 
+.font-size--sm {
+    font-size: var(--step--1) !important;
+}
+
 p {
     letter-spacing: $body-ls;
 }
@@ -183,7 +187,31 @@ p a {
     }
 }
 
-// --> Weight
+// --> Dark Backgrounds
+h1, h2, h3, h4, h5, p, li, button {
+    .dark-bg & {
+        color: var(--light-text);
+    }
+    .light-bg & {
+        color: var(--dark-text);
+    }
+}
 
 // ---> Layout
+
+// ---> Titles
+// --> Sections
+.section__title {
+    padding: var(--space-xl) 0;
+    .custom {
+        display: flex;
+        flex-flow: column wrap;
+        gap: var(--space-m);
+    }   
+    h1, h2 {margin: 0;}
+    h2 {
+        font-size: var(--step-3) !important;
+        font-family: $heading-extrabold !important;
+    }
+}
 

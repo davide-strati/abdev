@@ -1,37 +1,166 @@
-@use '../../cassiopeia_ab_default/scss/foundation'; 
-@use '../../cassiopeia_ab_default/scss/components/banner'; 
-@use '../../cassiopeia_ab_default/scss/components/accordion'; 
+@use '../../cassiopeia_ab_default/scss/foundation/' as f;
+
+// Verificare che siano effettivamente usati tutti i componenti
+@use '../../cassiopeia_ab_default/scss/components' as c;
 
 
 // ---> Banner
 .hero--home-page {
     height: calc(54vh + var(--header-height));
+
     .hero__title {
         margin-bottom: 0;
     }
 }
 
 
-@media screen and (min-width: 600px) {
-    // ---> Banner
-    .hero--home-page {
-        .hero__title, .hero__subtitle {text-align: left;}
+// ---> Target
+.target {
+    background-color: var(--gray-200);
+    background-size: cover;
+
+
+    // Layout
+    .u-grid {
+        margin: var(--space-xl) auto;
+        grid-auto-rows: min-content;
+        backdrop-filter: blur(10px);
     }
-}
-@media screen and (min-width: 768px) {
-    // ---> Banner
-    .hero--home-page {
-        height: calc(65vh + var(--header-height));
-        .hero__title {
-            max-width: 60%;
+
+    .module--target,
+    .tabs--target {
+        grid-column: 2 / 14;
+        grid-row: 2 / 3;
+    }
+
+    // --> Title
+    .section__title {
+        grid-column: 2 / 14;
+        grid-row: 1 / 2;
+
+        h1,
+        h2 {
+            color: var(--light-text);
+        }
+
+    }
+
+    // ---> MOBILE: it uses the buttons + modals
+    .modal-buttons__container {
+        gap: var(--space-s);
+    }
+
+    .card--button {
+        $cardWidth: calc(50% - var(--space-s));
+        flex: 0 0 $cardWidth;
+        gap: var(--space-m);
+        align-items: center;
+        padding: var(--space-l) var(--space-m);
+
+        background: f.$grad-green-light;
+        border: 4px solid var(--primary-800);
+        color: var(--dark-text);
+
+        font-size: var(--step-1);
+        font-family: f.$heading-black;
+    }
+
+    // ---> DESKTOP: tabs module activated
+
+    .tabs--target {
+        .page-header {
+            display: none;
+        }
+
+    }
+
+    // --> Tabs Content
+    [data-rlta-element=panel] {
+        background-color: transparent !important;
+        border-color: var(--gray-300) !important;
+    }
+
+    // -> Tabs content recalled articles
+    .intervento {
+        flex-flow: row wrap;
+        gap: var(--space-2xl);
+
+        .descrizione-intervento,
+        .lista-interventi {
+            flex: 1 1 0;
+
+        }
+
+        .lista-interventi {
+            margin-top: calc(var(--space-m) * -1);
+
+            .accordion-body p {
+                font-size: var(--step--1) !important;
+            }
         }
     }
 }
 
+.modal-body .intervento {
+    flex-flow: column;
+}
+
+
+
+
+@media screen and (min-width: 600px) {
+
+    // ---> Banner
+    .hero--home-page {
+
+        .hero__title,
+        .hero__subtitle {
+            text-align: left;
+        }
+    }
+
+    // ---> Targets
+    .target .card--button {
+        flex-direction: row !important;
+
+        img {
+            flex: 0 0 35%;
+            width: 35%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    // ---> Banner
+    .hero--home-page {
+        height: calc(65vh + var(--header-height));
+
+        .hero__title {
+            max-width: 60%;
+        }
+    }
+
+    // ---> Targets
+    .target .card--button {
+        flex-direction: column !important;
+        flex: 1 1 0;
+        width: 25%;
+
+        img {
+            flex: 1 1 0;
+            width: 100%;
+        }
+
+    }
+}
+
 @media screen and (min-width: 1024px) {
+
     // ---> Banner
     .hero--home-page {
         height: calc(75vh + var(--header-height));
+
         .hero__title {
             max-width: 60%;
         }
@@ -39,9 +168,11 @@
 }
 
 @media screen and (min-width: 1600px) {
+
     // ---> Banner
     .hero--home-page {
-        height: calc(80vh + var(--header-height));;
+        height: calc(80vh + var(--header-height));
+        ;
     }
 }
 

@@ -1,0 +1,64 @@
+@use '../foundation/typo' as t;
+// Regular Labs Tabs & Accordion
+
+// ---> Tab Nav Buttons
+[data-rlta-element=button-list] {
+    gap: 0 !important;
+}
+[data-rlta-element=button] {
+    background-color: var(--gray-500) !important;
+    border-color: var(--gray-400) !important;
+    border-radius: 0 !important;
+
+}
+// --> Tab Button Content
+[data-rlta-element=heading] {
+    display: flex !important;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: var(--space-m);
+    padding: var(--space-l) var(--space-xl);
+    // Text
+    font-family: t.$heading-regular;
+    font-size: var(--step-9) !important;
+    text-transform: uppercase;
+    color: var(--light-text);
+    // Icon container
+    &:before {
+        content: '';
+        flex: 0 0 50px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--light-text);
+        mask-size: 50px 50px;
+        
+    }
+}
+
+// -> Tab Button Content Icons
+[data-rlta-alias=privati] h3:before {
+    mask-image: url('/images/icons/servizi/gray/privati.svg');
+}
+[data-rlta-alias=aziende] h3:before {
+    mask-image: url('/images/icons/servizi/gray/aziende.svg');
+}
+[data-rlta-alias=condomini] h3:before {
+    mask-image: url('/images/icons/servizi/gray/condomini.svg');
+}
+[data-rlta-alias=comunita] h3:before {
+    mask-image: url('/images/icons/servizi/gray/comunita.svg');
+}
+
+// --> Tab Button Active 
+[data-rlta-element=button]:not([data-rlta-state=closed]) {
+    background: var(--primary-500) !important;
+    border-color: var(--primary-200) !important;
+    [data-rlta-element=heading] {
+        color: var(--dark-text);
+        &:before {
+            background-color: var(--dark-text);
+        }
+    }
+}
+

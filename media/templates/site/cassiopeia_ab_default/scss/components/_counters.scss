@@ -1,0 +1,10 @@
+@use '../foundation/typo' as t;
+
+.counter {
+    padding: var(--space-m) 0;
+    .heading-3 {
+        margin-top: 0;
+        font-family: t.$heading-black;
+        color: var(--primary-400);
+    }
+}

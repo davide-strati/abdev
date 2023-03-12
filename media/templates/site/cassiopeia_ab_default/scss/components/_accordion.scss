@@ -1,24 +1,105 @@
 @use '../foundation/typo' as t;
 
-.accordion-button {
-    gap: var(--space-s);
-    font-size: var(--step-0);
-    font-family: t.$heading-extrabold;
-}   
 
-.accordion-button:not(.collapsed) {
+// Accordion Text and Icons colors
+$labelDefault: var(--gray-200);
+$labelActive: var(--primary-400);
+// -> Dark Backgrounds
+$labelDefalutLight: var(--gray-800);
+$labelActvieLight: var(--primary-600);
+
+
+.accordion-item {
     background-color: transparent;
-    color: var(--primary-500) ;
+    h5 {
+        margin-top: 0;
+    }
+}
+
+.accordion-button {
+    padding: var(--space-m) var(--space-s);
+    gap: var(--space-s);
+    background-color: transparent;
+    color: $labelDefault;
+    font-size: var(--step-1);
+    font-family: t.$heading-extrabold;
+
+    .light-bg & {
+        color: $labelDefault;
+    }
+
+    .dark-bg & {
+        color: $labelDefalutLight;
+    }
+}
+
+// ---> Label with Icon, use css mask to change color/icon
+.accordion-header__icon {
+    flex: 0 0 var(--space-l);
+    height: var(--space-l);
+    background-color: $labelDefault;
+
+    &.icon--progetto {
+        mask-image: url('/images/icons/servizi/gray/progetto.svg');
+    }
+
+    &.icon--accumulo {
+        mask-image: url('/images/icons/servizi/gray/sistemi-accumulo.svg');
+    }
+
+    &.icon--installazione {
+        mask-image: url('/images/icons/servizi/gray/pannello-solare.svg');
+    }
+
+    &.icon--pompe {
+        mask-image: url('/images/icons/servizi/gray/pompe-calore.svg');
+    }
+
+    &.icon--consulenza {
+        mask-image: url('/images/icons/servizi/gray/burocrazia.svg');
+    }
+
+    &.icon--assistenza {
+        mask-image: url('/images/icons/servizi/gray/assistenza.svg');
+    }
+
+    // -> Dark Backgrounds
+    .dark-bg & {
+        background-color: $labelDefalutLight;
+    }
+
+    // -> Light Backgrounds
+    .light-bg & {
+        background-color: $labelDefault;
+    }
 }
 
 
-// ---> Accordion Servizi 
+// --> Not Collapsed
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    .light-bg & {
+        color: $labelActive ;
 
-.accordion-header__icon, .accordion-button svg {
-    flex: 0 0 var(--space-m);
-    height: var(--space-m);
+        .accordion-header__icon {
+            background-color: $labelActive;
+        }
+    }
 
-    &.icon--progetto {
-        background-image: url('/images/icons/servizi/gray/progetto.svg');
+    // -> Dark Backgrounds
+    .dark-bg & {
+        color: $labelActvieLight;
+
+        .accordion-header__icon {
+            background-color: $labelActvieLight;
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+
+    // ---> Accordion Body
+    .accordion-body {
+        padding-left: var(--space-2xl);
     }
 }

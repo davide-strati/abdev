@@ -1,4 +1,4 @@
-@use 'variables';
-@use 'typo';
-@use 'layout';
-@use 'atoms';
+@forward 'typo';
+@forward 'variables';
+@forward 'layout';
+@forward 'atoms';

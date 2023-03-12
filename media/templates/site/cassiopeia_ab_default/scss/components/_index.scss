@@ -1,3 +1,6 @@
-@use 'accordion';
-@use 'banner';
+@forward 'accordion';
+@forward 'banner';
+@forward 'modals';
+@forward 'rltabs';
+@forward 'counters';
 
