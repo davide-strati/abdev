@@ -12,6 +12,7 @@
   --primary-400: rgba(174, 219, 0, 1);
   --primary-300: rgba(137, 184, 0, 1);
   --primary-200: rgba(101, 148, 0, 1);
+  --secondary-500: #3cacd1;
   --gray-100: rgba(4, 5, 23, 1);
   --gray-200: rgba(29, 30, 48, 1);
   --gray-300: rgba(51, 53, 76, 1);
@@ -101,7 +102,7 @@ $section-padding-bottom: var(--space-3xl);
 
 $button-padding-y: var(--space-s);
 $button-padding-x: var(--space-l);
-
+$button-margin-y: var(--space-m);
 
 
 // ---> Grid

@@ -18,7 +18,17 @@ picture.image-cover img {
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    margin: v.$button-margin-y 0;
     padding: v.$button-padding-y v.$button-padding-x;
 
+
     font-family: t.$heading-extrabold;
+
+    // -> Call to action
+    &.btn--cta {
+        background-color: var(--gray-200);
+        border: 3px solid var(--primary-500);
+        box-shadow: 0px 14px 19px rgba(0, 0, 0, 0.29), 0px 4.22059px 8.28099px rgba(0, 0, 0, 0.19), 0px 1.75302px 3.3426px rgba(0, 0, 0, 0.14), 0px 0.634032px 1.58367px rgba(0, 0, 0, 0.1);;
+        color: var(--primary-500);
+    }
 }

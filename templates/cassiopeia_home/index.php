@@ -81,8 +81,9 @@ $wa->usePreset('template.cassiopeia.' . ($this->direction === 'rtl' ? 'rtl' : 'l
 // Override 'template.active' asset to set correct ltr/rtl dependency
 $wa->registerStyle('template.active', '', [], [], ['template.cassiopeia.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr')]);
 
-// DVD ADDON - Add modal to homepage
+// DVD ADDON - Add modal to homepage + carousel
 $wa->useScript('bootstrap.modal');
+$wa->useScript('bootstrap.carousel');
 
 // Logo file or site title param
 if ($this->params->get('logoFile')) {
@@ -231,14 +232,16 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 		<?php endif; ?>
 
 		<?php if ($this->countModules('bottom-a', true)) : ?>
-		<div class="grid-child container-bottom-a full-width">
+		<div id="ct" class="grid-child container-bottom-a full-width">
 			<jdoc:include type="modules" name="bottom-a" style="card" />
 		</div>
 		<?php endif; ?>
 
 		<?php if ($this->countModules('bottom-b', true)) : ?>
-		<div class="grid-child container-bottom-b">
+		<div class="grid-child container-bottom-b full-width">
+			<div class="u-grid">
 			<jdoc:include type="modules" name="bottom-b" style="card" />
+			</div>
 		</div>
 		<?php endif; ?>
 	</div>

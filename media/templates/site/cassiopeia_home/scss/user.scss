@@ -155,13 +155,73 @@
     background-size: cover;
     background-position: center center;
     padding: f.$section-padding-top 0;
+    // ----> Sopralluogo
     .custom {
         grid-column: 2 / 14;
     }
     h3 {
-        margin-top: 0;
+        margin: 0;
+    }
+    h5 {
+        margin-top: var(--space-m);
+        margin-bottom: var(--space-xl);
+    }
+    // ---> Qr Code Contatti
+    .cta__contacts {
+        background-color: var(--gray-900);
+        border-radius: 6px;
+        box-shadow:  0px 100px 80px rgba(0, 0, 0, 0.14), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.10064), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.083455), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.07), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.056545), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0393604);;
+        .section--qrscan, .section--contatti {
+            padding: var(--space-m);
+            width: 100%;
+        }
+        p {margin-bottom: 0;}
+    }
+    .scan-icon, .img-qrcode {
+        flex: 0 0 50%;
+        width: 50%;
+        max-width: 50%;
+    }
+
+    .section--qrscan {
+        background: radial-gradient(117.18% 85.73% at 0% -8.7%, #494F69 0%, #33354C 0%, #1D1E30 100%);
+        p {
+            text-align: center;
+            color: var(--light-text);
+        }
+    }
+    .section--contatti {
+        text-align: left;
+        p, a {
+            font-family: f.$heading-extrabold;
+            font-size: var(--step--1) !important;
+        }
     }
 }
+
+// --> BOTTOM-B Carousel Slider servizi
+
+.container-bottom-b {
+    padding: var(--space-3xl) 0;
+    background: url('../images/install-01.jpeg') no-repeat scroll center center transparent;
+    background-size: cover;
+    .moduletable {
+        grid-column: main-start/main-end;
+        padding: var(--space-l) 0;
+        background: linear-gradient(180deg, rgba(120, 131, 160, 0.7) 0%, rgba(51, 53, 76, 0.7) 100%);
+        background-blend-mode: multiply;
+        border: 1px solid #7883A0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 38px 56px rgba(0, 0, 0, 0.03), 0px 15.8755px 23.3955px rgba(0, 0, 0, 0.0220479), 0px 8.4878px 12.5083px rgba(0, 0, 0, 0.018902), 0px 4.75819px 7.01207px rgba(0, 0, 0, 0.0164528), 0px 2.52704px 3.72406px rgba(0, 0, 0, 0.0138157);
+    backdrop-filter: blur(8.775px);
+    }
+    // Carousel Servizi
+    .carousel--servizi {
+        .carousel-control-prev {left: -60px;}
+        .carousel-control-next {right: -60px;}
+    }
+}
+
+
 
 @media screen and (min-width: 600px) {
 
@@ -246,7 +306,7 @@
     }
     // ---> CTA Container 
     .cta__container {
-        gap: var(--space-l);
+        gap: var(--space-3xl);
         .cta__content {
             flex: 2 1 0;
         }
