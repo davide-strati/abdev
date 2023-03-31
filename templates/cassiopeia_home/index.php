@@ -247,6 +247,13 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 			</div>
 		</div>
 		<?php endif; ?>
+		<?php if ($this->countModules('bottom-c', true)) : ?>
+		<div class="grid-child container-bottom-c full-width">
+			<div class="u-grid">
+			<jdoc:include type="modules" name="bottom-c" style="card" />
+			</div>
+		</div>
+		<?php endif; ?>
 	</div>
 
 	<?php if ($this->countModules('footer', true)) : ?>

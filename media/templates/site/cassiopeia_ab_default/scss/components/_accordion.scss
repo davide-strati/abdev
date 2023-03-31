@@ -63,6 +63,16 @@ $labelActvieLight: var(--primary-600);
         mask-image: url('/images/icons/servizi/gray/assistenza.svg');
     }
 
+    &.icon--consumi {
+        mask-image: url('/images/icons/servizi/gray/consumi.svg');
+    }
+    &.icon--ricarica {
+        mask-image: url('/images/icons/servizi/gray/colonnine.svg');
+    }
+    &.icon--terreni {
+        mask-image: url('/images/icons/servizi/gray/fotovoltaico.svg');
+    }
+
     // -> Dark Backgrounds
     .dark-bg & {
         background-color: $labelDefalutLight;

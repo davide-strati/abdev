@@ -3,8 +3,45 @@
 // Verificare che siano effettivamente usati tutti i componenti
 @use '../../cassiopeia_ab_default/scss/components' as c;
 
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+// Bootstrap
+
+@supports (display: grid) {
+    .site-grid {
+      display: grid;
+      grid-template-areas: ". banner banner banner banner ."
+        ". top-a top-a top-a top-a ."
+        ". top-b top-b top-b top-b ."
+        ". comp comp comp comp ."
+        ". side-r side-r side-r side-r ."
+        ". side-l side-l side-l side-l ."
+        ". bot-a bot-a bot-a bot-a ."
+        ". bot-b bot-b bot-b bot-b ."
+        ". bot-c bot-c bot-c bot-c .";
+  
+      @media screen and (min-width: 1200px) {
+        grid-template-areas: ". banner banner banner banner ."
+          ". top-a top-a top-a top-a ."
+          ". top-b top-b top-b top-b ."
+          ". side-l comp comp side-r ."
+          ". bot-a bot-a bot-a bot-a ."
+          ". bot-b bot-b bot-b bot-b ."
+          ". bot-c bot-c bot-c bot-c .";
+      }
+    }
+  }
+  
+.container-bottom-c {
+    grid-area: bot-c;
+}
+
+
 
 // ---> Banner
+.container-banner {
+    margin-bottom: 0;
+}
 .hero--home-page {
     height: calc(54vh + var(--header-height));
 
@@ -242,6 +279,32 @@
         font-family: f.$body-bold;
     }
     
+}
+
+// --> BOTTOM-C - Form & History
+
+.container-bottom-c {
+    padding: var(--space-3xl) 0;
+    // Layout
+    .module-form {
+        grid-column: main-start / 10;
+    }
+    .module-storia {
+        grid-column: 10 / main-end;
+    }
+    // Contenuti Form
+    .module__content {
+        .convertforms {
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+    // Contenuti Articolo Ab energia
+    .module-storia .com-content-article__body {
+        p {font-size: var(--step--1) !important;}
+    }
 }
 
 

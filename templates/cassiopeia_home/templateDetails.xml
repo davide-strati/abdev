@@ -22,6 +22,7 @@
     <position>sidebar-right</position>
     <position>bottom-a</position>
     <position>bottom-b</position>
+    <position>bottom-c</position>
     <position>footer</position>
     <position>modals</position>
     <position>debug</position>
