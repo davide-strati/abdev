@@ -83,7 +83,9 @@ $wa->registerStyle('template.active', '', [], [], ['template.cassiopeia.' . ($th
 
 // DVD ADDON - Add modal to homepage + carousel
 $wa->useScript('bootstrap.modal');
-$wa->useScript('bootstrap.carousel');
+$wa->useScript('jquery');
+
+
 
 // Logo file or site title param
 if ($this->params->get('logoFile')) {
@@ -125,6 +127,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 	<jdoc:include type="metas" />
 	<jdoc:include type="styles" />
 	<jdoc:include type="scripts" />
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body class="site <?php echo $option

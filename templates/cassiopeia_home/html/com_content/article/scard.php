@@ -59,6 +59,7 @@ $isExpired         = !is_null($this->item->publish_down) && $this->item->publish
         <div class="timeline-circle"><?php echo LayoutHelper::render('joomla.content.full_image', $this->item); ?></div>
         <div class="time-line--right"></div>
     </div>
+
         <<?php echo $htag; ?> itemprop="headline">
             <?php echo $this->escape($this->item->title); ?>
         </<?php echo $htag; ?>>

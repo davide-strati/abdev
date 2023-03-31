@@ -59,7 +59,12 @@ window.onload = function () {
             next = next.nextElementSibling
         }
     })
-    
 
-
+    // Controllo dell'head per una migliore implentazione dei file js e css
+    $('.multiple-items').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
 }
+
