@@ -1,42 +1,40 @@
-@use '../../cassiopeia_ab_default/scss/foundation/' as f;
+@use "../../cassiopeia_ab_default/scss/foundation/" as f;
 
 // Verificare che siano effettivamente usati tutti i componenti
-@use '../../cassiopeia_ab_default/scss/components' as c;
-
-@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+@use "../../cassiopeia_ab_default/scss/components" as c;
 
 // Bootstrap
 
 @supports (display: grid) {
     .site-grid {
-      display: grid;
-      grid-template-areas: ". banner banner banner banner ."
-        ". top-a top-a top-a top-a ."
-        ". top-b top-b top-b top-b ."
-        ". comp comp comp comp ."
-        ". side-r side-r side-r side-r ."
-        ". side-l side-l side-l side-l ."
-        ". bot-a bot-a bot-a bot-a ."
-        ". bot-b bot-b bot-b bot-b ."
-        ". bot-c bot-c bot-c bot-c .";
-  
-      @media screen and (min-width: 1200px) {
-        grid-template-areas: ". banner banner banner banner ."
-          ". top-a top-a top-a top-a ."
-          ". top-b top-b top-b top-b ."
-          ". side-l comp comp side-r ."
-          ". bot-a bot-a bot-a bot-a ."
-          ". bot-b bot-b bot-b bot-b ."
-          ". bot-c bot-c bot-c bot-c .";
-      }
+        display: grid;
+        grid-template-areas:
+            ". banner banner banner banner ."
+            ". top-a top-a top-a top-a ."
+            ". top-b top-b top-b top-b ."
+            ". comp comp comp comp ."
+            ". side-r side-r side-r side-r ."
+            ". side-l side-l side-l side-l ."
+            ". bot-a bot-a bot-a bot-a ."
+            ". bot-b bot-b bot-b bot-b ."
+            ". bot-c bot-c bot-c bot-c .";
+
+        @media screen and (min-width: 1200px) {
+            grid-template-areas:
+                ". banner banner banner banner ."
+                ". top-a top-a top-a top-a ."
+                ". top-b top-b top-b top-b ."
+                ". side-l comp comp side-r ."
+                ". bot-a bot-a bot-a bot-a ."
+                ". bot-b bot-b bot-b bot-b ."
+                ". bot-c bot-c bot-c bot-c .";
+        }
     }
-  }
-  
+}
+
 .container-bottom-c {
     grid-area: bot-c;
 }
-
-
 
 // ---> Banner
 .container-banner {
@@ -50,20 +48,22 @@
     }
 }
 
-
 // ---> Target
 .target {
     padding: f.$section-padding-bottom 0;
 
-    
-    background-color: var(--gray-200);
-    background-size: cover;
-
+    background: url("/images/backgrounds/bg-target-1200.jpg") no-repeat scroll bottom center var(--gray-200);
+    background-size: contain;
 
     // Layout
     .u-grid {
         grid-auto-rows: min-content;
         backdrop-filter: blur(10px);
+        background-color: rgba(26, 30, 49, 0.82) !important;
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.14), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.10064),
+            0px 22.3363px 17.869px rgba(0, 0, 0, 0.083455), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.07),
+            0px 6.6501px 5.32008px rgba(0, 0, 0, 0.056545), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0393604);
+        border-radius: 8px;
     }
 
     .module--target,
@@ -81,12 +81,11 @@
         h2 {
             color: var(--light-text);
         }
-
     }
 
     // ---> MOBILE: it uses the buttons + modals
     .modal-buttons__container {
-        gap: var(--space-s);
+        gap: var(--grid-gutter);
     }
 
     .card--button {
@@ -107,27 +106,34 @@
     // ---> DESKTOP: tabs module activated
 
     .tabs--target {
+        padding-bottom: var(--space-l);
         .page-header {
             display: none;
         }
-
+        .com-content-article__body {
+            h3 {
+                margin-bottom: var(--space-l);
+            }
+        }
     }
 
     // --> Tabs Content
-    [data-rlta-element=panel] {
+    [data-rlta-element="panel-content"] {
+        padding: 0 !important;
+    }
+    [data-rlta-element="panel"] {
         background-color: transparent !important;
-        border-color: var(--gray-300) !important;
+        border: none !important;
     }
 
     // -> Tabs content recalled articles
     .intervento {
         flex-flow: row wrap;
-        gap: var(--space-2xl);
+        gap: var(--grid-gutter);
 
         .descrizione-intervento,
         .lista-interventi {
             flex: 1 1 0;
-
         }
 
         .lista-interventi {
@@ -143,7 +149,6 @@
 .modal-body .intervento {
     flex-flow: column;
 }
-
 
 // ---> vantaggi
 
@@ -161,7 +166,9 @@
 .lista--vantaggi {
     padding-left: 0;
     .list-item__title {
-        img {display: none;}
+        img {
+            display: none;
+        }
     }
 }
 
@@ -170,7 +177,6 @@
     .container-sidebar-right {
         grid-column: 2/14;
         padding-bottom: f.$section-padding-bottom;
-
     }
 }
 
@@ -184,44 +190,62 @@
     }
 }
 
-
 // ---> CTA
 
 .container-bottom-a {
-    background-image: url('/images/backgrounds/bg-cta.jpg');
+    background-image: url("/images/backgrounds/bg-cta-y.jpg");
     background-size: cover;
     background-position: center center;
     padding: f.$section-padding-top 0;
-    // ----> Sopralluogo
+}
+
+.module--cta {
     .custom {
         grid-column: 2 / 14;
     }
+}
+// ----> Sopralluogo
+.cta__content {
+    padding: 0 var(--space-m);
+    gap: var(--space-xl);
     h3 {
-        margin: 0;
+        margin-top: 0;
+        margin-bottom: var(--space-xl);
     }
     h5 {
         margin-top: var(--space-m);
         margin-bottom: var(--space-xl);
     }
-    // ---> Qr Code Contatti
-    .cta__contacts {
-        background-color: var(--gray-900);
-        border-radius: 6px;
-        box-shadow:  0px 100px 80px rgba(0, 0, 0, 0.14), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.10064), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.083455), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.07), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.056545), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0393604);;
-        .section--qrscan, .section--contatti {
-            padding: var(--space-m);
-            width: 100%;
-        }
-        p {margin-bottom: 0;}
+}
+
+// ---> Qr Code Contatti
+.cta__contacts {
+    display: grid;
+    grid-template-areas: 'a'
+    'b'
+    'c';
+    background-color: var(--gray-900);
+    border-radius: 6px;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.14), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.10064),
+        0px 22.3363px 17.869px rgba(0, 0, 0, 0.083455), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.07),
+        0px 6.6501px 5.32008px rgba(0, 0, 0, 0.056545), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0393604);
+    .section--qrscan,
+    .section--contatti {
+        padding: var(--space-m);
+        width: 100%;
     }
-    .scan-icon, .img-qrcode {
+    p {
+        margin-bottom: 0;
+    }
+    .scan-icon,
+    .img-qrcode {
         flex: 0 0 50%;
         width: 50%;
         max-width: 50%;
     }
 
     .section--qrscan {
-        background: radial-gradient(117.18% 85.73% at 0% -8.7%, #494F69 0%, #33354C 0%, #1D1E30 100%);
+        background: radial-gradient(117.18% 85.73% at 0% -8.7%, #494f69 0%, #33354c 0%, #1d1e30 100%);
         p {
             text-align: center;
             color: var(--light-text);
@@ -229,10 +253,40 @@
     }
     .section--contatti {
         text-align: left;
-        p, a {
-            font-family: f.$heading-extrabold;
-            font-size: var(--step--1) !important;
+
+        p,
+        a {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            gap: var(--space-m);
+            margin-bottom: var(--space-s);
+            &:before {
+                content: '';
+                display: inline-block;
+                position: relative;
+                width: 24px;
+                height: 24px;
+                background-color: transparent;
+            }
         }
+        a {font-family: f.$heading-extrabold;}
+        .indirizzo:before {
+            background-image: url('/images/icons/line-icons/apartment.svg');
+        }
+        .telefono:before {
+            background-image: url('/images/icons/line-icons/phone-set.svg');
+        }
+        .email:before {
+            background-image: url('/images/icons/line-icons/envelope.svg');
+        }
+        .pec:before {
+            background-image: url('/images/icons/line-icons/protection.svg');
+        }
+        .web:before {
+            background-image: url('/images/icons/line-icons/website.svg');
+        }
+        
     }
 }
 
@@ -240,26 +294,28 @@
 
 .container-bottom-b {
     padding: var(--space-3xl) 0;
-    background: url('../images/install-01.jpeg') no-repeat scroll center center transparent;
+    background: url("../images/install-01.jpeg") no-repeat scroll center center transparent;
     background-size: cover;
     .moduletable {
         grid-column: main-start/main-end;
         padding: var(--space-l) 0;
         background: linear-gradient(180deg, rgba(120, 131, 160, 0.7) 0%, rgba(51, 53, 76, 0.7) 100%);
         background-blend-mode: multiply;
-        border: 1px solid #7883A0;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 38px 56px rgba(0, 0, 0, 0.03), 0px 15.8755px 23.3955px rgba(0, 0, 0, 0.0220479), 0px 8.4878px 12.5083px rgba(0, 0, 0, 0.018902), 0px 4.75819px 7.01207px rgba(0, 0, 0, 0.0164528), 0px 2.52704px 3.72406px rgba(0, 0, 0, 0.0138157);
+        border: 1px solid #7883a0;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 38px 56px rgba(0, 0, 0, 0.03),
+            0px 15.8755px 23.3955px rgba(0, 0, 0, 0.0220479), 0px 8.4878px 12.5083px rgba(0, 0, 0, 0.018902),
+            0px 4.75819px 7.01207px rgba(0, 0, 0, 0.0164528), 0px 2.52704px 3.72406px rgba(0, 0, 0, 0.0138157);
         backdrop-filter: blur(8.775px);
     }
-    // Title 
+    // Title
     .module__title {
         padding-left: var(--space-l);
         padding-right: var(--space-l);
-        h3, h5 {
+        h3,
+        h5 {
             color: var(--gray-900) !important;
         }
     }
-
 
     // Slick carousel servizi
     .slick-slide:first-child {
@@ -278,7 +334,6 @@
         font-size: var(--step--1) !important;
         font-family: f.$body-bold;
     }
-    
 }
 
 // --> BOTTOM-C - Form & History
@@ -287,10 +342,10 @@
     padding: var(--space-3xl) 0;
     // Layout
     .module-form {
-        grid-column: main-start / 10;
+        grid-column: 2 / 14;
     }
     .module-storia {
-        grid-column: 10 / main-end;
+        grid-column: 2 / 14;
     }
     // Contenuti Form
     .module__content {
@@ -303,17 +358,15 @@
     }
     // Contenuti Articolo Ab energia
     .module-storia .com-content-article__body {
-        p {font-size: var(--step--1) !important;}
+        p {
+            font-size: var(--step--1) !important;
+        }
     }
 }
 
-
-
 @media screen and (min-width: 600px) {
-
     // ---> Banner
     .hero--home-page {
-
         .hero__title,
         .hero__subtitle {
             text-align: left;
@@ -332,7 +385,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
     // ---> Banner
     .hero--home-page {
         height: calc(65vh + var(--header-height));
@@ -352,19 +404,43 @@
             flex: 1 1 0;
             width: 100%;
         }
-
     }
 
-    // ---> Counters 
+    // ---> Counters
     .module--counter {
         .counter {
             flex: 1 0 50%;
         }
     }
+
+    // ---> QR Code Card
+    .cta__contacts {
+        grid-template-areas: 'a b'
+        'c b';
+
+        .section--top {
+            grid-area: a;
+        }
+        .section--qrscan {
+            grid-area: c;
+        }
+        .section--contatti {
+            grid-area: b;
+        }
+    }
+
+    // ---> Form e Ditta
+    .container-bottom-c {
+        .module-form {
+            grid-column: main-start / 10;
+        }
+        .module-storia {
+            grid-column: 10 / main-end;
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
-
     // ---> Banner
     .hero--home-page {
         height: calc(75vh + var(--header-height));
@@ -390,7 +466,36 @@
             }
         }
     }
-    // ---> CTA Container 
+    // ---> CTA Container
+    .cta__container {
+        gap: var(--space-3xl);
+        .cta__content {
+            flex: 1 1 0;
+        }
+        .cta__contacts {
+            flex: 1 0 0;
+        }
+    }
+    // ---> QR Code Card
+    .cta__contacts {
+        grid-template-areas: 'a'
+        'b'
+        'c';
+
+        .section--top {
+            grid-area: a;
+        }
+        .section--qrscan {
+            grid-area: b;
+        }
+        .section--contatti {
+            grid-area: c;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    // ---> CTA Container
     .cta__container {
         gap: var(--space-3xl);
         .cta__content {
@@ -403,15 +508,12 @@
 }
 
 @media screen and (min-width: 1600px) {
-
     // ---> Banner
     .hero--home-page {
         height: calc(80vh + var(--header-height));
-        ;
     }
 }
 
 // -> Pictures
-
 
 // + Image cover all the space +

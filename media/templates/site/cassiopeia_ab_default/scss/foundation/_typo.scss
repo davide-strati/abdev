@@ -170,11 +170,11 @@ strong, .p--bold {
 }
 
 a {
-    color: v.$primary;
-    text-decoration: none;
+    color: var(--secondary-500);
     transition: all 0.5s ease-in-out;   
+    text-decoration: none;
     &:hover {
-        color: v.$primary-hover;        
+        color: var(--secondary-700);        
         text-decoration: none !important;
     }
 }

@@ -12,6 +12,13 @@
     background-image: none;
     background-color: transparent;
     z-index: 100;
+    transition: all 0.5s ease-in;
+
+    // --> Background color on scroll
+    &.bg--white {
+        background-color: #fff !important;
+        border-bottom: 1px solid var(--gray-700);
+    }
 
     // --> Header Grid
     .u-grid {
@@ -27,6 +34,7 @@
         grid-column: span 4;
         display: flex;
         justify-content: end;
+        padding-bottom: 0;
         nav {
             margin-top: 0;
             justify-content: end;
@@ -93,6 +101,9 @@
 
 @media screen and (min-width: 1024px) {
         // -> Header Grid Elements    
+        .ab-header .u-grid {
+            padding: var(--space-m) 0;
+        }
         .navbar-brand {
             grid-column: 2 / span 3 !important;
         }
@@ -107,7 +118,7 @@
                     color: t.$heading-text-color;
                     font-family: t.$heading-extrabold;
                     text-transform: uppercase;
-                    padding: 0 1em;
+                    padding: 0 1em !important;
                 }
             }
         }

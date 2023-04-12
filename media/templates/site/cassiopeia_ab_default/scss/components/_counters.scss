@@ -9,7 +9,10 @@
     border-bottom: 1px solid var(--gray-900);
     .heading-3 {
         margin-top: 0;
-        font-family: t.$heading-black;
+        font-family: t.$heading-black !important;
+        font-size: var(--step-5) !important;
+        letter-spacing: 0.05em;
         color: var(--primary-400);
     }
+    
 }

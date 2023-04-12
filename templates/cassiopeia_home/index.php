@@ -128,6 +128,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 	<jdoc:include type="styles" />
 	<jdoc:include type="scripts" />
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="module" src="/media/templates/site/cassiopeia_home/js/abmod.js"></script>
 </head>
 
 <body class="site <?php echo $option

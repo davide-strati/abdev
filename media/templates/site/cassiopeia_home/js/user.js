@@ -1,6 +1,6 @@
-
 window.onload = function () {
 
+    // Counters Module
     function aggiornaCounters() {
         const counters = document.querySelectorAll(".count");
         const speed = 50;
@@ -10,7 +10,7 @@ window.onload = function () {
                 const target = parseInt(+counter.getAttribute("data-target"));
                 const count = parseInt(+counter.innerText);
                 const increment = 1;
-                
+
 
                 if (count < target) {
                     counter.innerText = count + increment;
@@ -33,7 +33,7 @@ window.onload = function () {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 aggiornaCounters()
-                
+
             }
         });
     }
@@ -43,28 +43,34 @@ window.onload = function () {
 
     observer.observe(targetContainer);
 
-
-    // Bootstrap Carousel with more items active
-    let items = document.querySelectorAll('.carousel .carousel-item')
-    items.forEach((el) => {
-        const minPerSlide = 3
-        let next = el.nextElementSibling
-        for (var i=1; i<minPerSlide; i++) {
-            if (!next) {
-                // wrap carousel by using first child
-                next = items[0]
-              }
-            let cloneChild = next.cloneNode(true)
-            el.appendChild(cloneChild.children[0])
-            next = next.nextElementSibling
-        }
-    })
-
     // Controllo dell'head per una migliore implentazione dei file js e css
     $('.multiple-items').slick({
+        dots: true,
         infinite: false,
+        speed: 300,
         slidesToShow: 3,
-        slidesToScroll: 3
-      });
+        slidesToScroll: 3,
+        responsive: [
+          
+          {
+            breakpoint: 900,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 550,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
+
+
+
+
 }
 
