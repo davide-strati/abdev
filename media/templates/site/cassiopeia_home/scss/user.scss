@@ -52,7 +52,7 @@
 .target {
     padding: f.$section-padding-bottom 0;
 
-    background: url("/images/backgrounds/bg-target-1200.jpg") no-repeat scroll bottom center var(--gray-200);
+    background: url("/images/backgrounds/traliccio/600.jpg") no-repeat scroll bottom center var(--gray-200);
     background-size: contain;
 
     // Layout
@@ -395,10 +395,14 @@
     }
 
     // ---> Targets
+    .target {
+        background: url("/images/backgrounds/traliccio/1023.jpg") no-repeat scroll bottom center var(--gray-200);
+    }
     .target .card--button {
         flex-direction: column !important;
         flex: 1 1 0;
         width: 25%;
+
 
         img {
             flex: 1 1 0;
@@ -450,6 +454,11 @@
         }
     }
 
+    // ---> TARGET
+    .target {
+        background: url("/images/backgrounds/traliccio/1400.jpg") no-repeat scroll bottom left var(--gray-200);
+    }
+
     // ---> MAIN CONTENT
     .pg--home {
         .container-component {
@@ -495,6 +504,12 @@
 }
 
 @media screen and (min-width: 1400px) {
+
+    // ---> TARGET
+    .target {
+        background: url("/images/backgrounds/traliccio/2500.jpg") no-repeat scroll bottom left var(--gray-200);
+    }
+
     // ---> CTA Container
     .cta__container {
         gap: var(--space-3xl);

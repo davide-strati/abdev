@@ -1098,7 +1098,7 @@ picture.image-cover img {
 
 .target {
   padding: var(--space-3xl) 0;
-  background: url("/images/backgrounds/bg-target-1200.jpg") no-repeat scroll bottom center var(--gray-200);
+  background: url("/images/backgrounds/traliccio/600.jpg") no-repeat scroll bottom center var(--gray-200);
   background-size: contain;
 }
 .target .u-grid {
@@ -1414,6 +1414,9 @@ picture.image-cover img {
   .hero--home-page .hero__title {
     max-width: 60%;
   }
+  .target {
+    background: url("/images/backgrounds/traliccio/1023.jpg") no-repeat scroll bottom center var(--gray-200);
+  }
   .target .card--button {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
@@ -1466,6 +1469,9 @@ picture.image-cover img {
   }
   .hero--home-page .hero__title {
     max-width: 60%;
+  }
+  .target {
+    background: url("/images/backgrounds/traliccio/1400.jpg") no-repeat scroll bottom left var(--gray-200);
   }
   .pg--home .container-component {
     -ms-grid-column: 2;
@@ -1573,6 +1579,9 @@ picture.image-cover img {
   }
 }
 @media screen and (min-width: 1400px) {
+  .target {
+    background: url("/images/backgrounds/traliccio/2500.jpg") no-repeat scroll bottom left var(--gray-200);
+  }
   .cta__container {
     gap: var(--space-3xl);
   }

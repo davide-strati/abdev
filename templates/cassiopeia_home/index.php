@@ -200,7 +200,7 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 		<?php endif; ?>
 
 		<?php if ($this->countModules('top-a', true)) : ?>
-		<div class="grid-child container-top-a full-width target bg--dark">
+		<div id="soluzioni" class="grid-child container-top-a full-width target bg--dark">
 			<div class="u-grid">
 				<jdoc:include type="modules" name="top-a" style="card" />
 			</div>
@@ -230,26 +230,26 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
 		</div>
 
 		<?php if ($this->countModules('sidebar-right', true)) : ?>
-		<div class="grid-child container-sidebar-right">
+		<div id="vantaggi" class="grid-child container-sidebar-right">
 			<jdoc:include type="modules" name="sidebar-right" style="card" />
 		</div>
 		<?php endif; ?>
 
 		<?php if ($this->countModules('bottom-a', true)) : ?>
-		<div id="ct" class="grid-child container-bottom-a full-width">
+		<div id="calltoaction" class="grid-child container-bottom-a full-width">
 			<jdoc:include type="modules" name="bottom-a" style="card" />
 		</div>
 		<?php endif; ?>
 
 		<?php if ($this->countModules('bottom-b', true)) : ?>
-		<div class="grid-child container-bottom-b full-width">
+		<div id="intervento" class="grid-child container-bottom-b full-width">
 			<div class="u-grid">
 			<jdoc:include type="modules" name="bottom-b" style="card" />
 			</div>
 		</div>
 		<?php endif; ?>
 		<?php if ($this->countModules('bottom-c', true)) : ?>
-		<div class="grid-child container-bottom-c full-width">
+		<div id="contatti" class="grid-child container-bottom-c full-width">
 			<div class="u-grid">
 			<jdoc:include type="modules" name="bottom-c" style="card" />
 			</div>
