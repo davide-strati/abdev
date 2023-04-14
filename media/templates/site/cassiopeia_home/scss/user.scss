@@ -19,7 +19,7 @@
             ". bot-b bot-b bot-b bot-b ."
             ". bot-c bot-c bot-c bot-c .";
 
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1024px) {
             grid-template-areas:
                 ". banner banner banner banner ."
                 ". top-a top-a top-a top-a ."
@@ -52,7 +52,7 @@
 .target {
     padding: f.$section-padding-bottom 0;
 
-    background: url("/images/backgrounds/traliccio/600.jpg") no-repeat scroll bottom center var(--gray-200);
+    background: url("/images/backgrounds/traliccio/600.jpg") no-repeat fixed top center var(--gray-200);
     background-size: contain;
 
     // Layout
@@ -194,7 +194,7 @@
 
 .container-bottom-a {
     background-image: url("/images/backgrounds/bg-cta-y.jpg");
-    background-size: cover;
+    background-size: cover !important;
     background-position: center center;
     padding: f.$section-padding-top 0;
 }
@@ -202,6 +202,11 @@
 .module--cta {
     .custom {
         grid-column: 2 / 14;
+    }
+    .btn--cta {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 // ----> Sopralluogo
@@ -261,6 +266,7 @@
             align-items: center;
             gap: var(--space-m);
             margin-bottom: var(--space-s);
+            font-size: var(--step-1) !important;
             &:before {
                 content: '';
                 display: inline-block;
@@ -339,10 +345,19 @@
 // --> BOTTOM-C - Form & History
 
 .container-bottom-c {
+    background: url('/images/logo/logo-ray-gray.svg') no-repeat scroll 20vw 110% transparent;
     padding: var(--space-3xl) 0;
     // Layout
     .module-form {
         grid-column: 2 / 14;
+        .custom {
+            background-color:rgba(255,255,255, 0.8);
+            border-radius: var(--space-s);
+            box-shadow: f.;
+            .convertforms {
+                background-color: transparent;
+            }
+        }
     }
     .module-storia {
         grid-column: 2 / 14;
@@ -357,9 +372,27 @@
         }
     }
     // Contenuti Articolo Ab energia
+    .module-storia .com-content-article {
+        padding-bottom: var(--space-s);
+    }
     .module-storia .com-content-article__body {
         p {
             font-size: var(--step--1) !important;
+        }
+    }
+    // Brands
+    .supported-brands {
+        img {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: var(--space-s) auto;
+            padding: var(--space-s);
+            background-color: #fff;
+            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.14),
+            0 4px 2px rgba(0, 0, 0, 0.14),
+            0 8px 4px rgba(0, 0, 0, 0.07),
+            0 8px 8px rgba(0, 0, 0, 0.07);
         }
     }
 }
