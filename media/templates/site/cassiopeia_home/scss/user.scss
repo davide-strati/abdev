@@ -89,8 +89,9 @@
     }
 
     .card--button {
-        $cardWidth: calc(50% - var(--space-s));
-        flex: 0 0 $cardWidth;
+        $cardWidth: calc(50% - (var(--grid-gutter) * 2 ));
+        flex: 1 0 $cardWidth;
+        margin: 0;
         gap: var(--space-m);
         align-items: center;
         padding: var(--space-l) var(--space-m);
@@ -134,6 +135,11 @@
         .descrizione-intervento,
         .lista-interventi {
             flex: 1 1 0;
+        }
+
+        .descrizione-intervento ul li {
+            margin-bottom: var(--space-xs);
+            font-family: f.$body-bold;
         }
 
         .lista-interventi {
@@ -345,8 +351,28 @@
 // --> BOTTOM-C - Form & History
 
 .container-bottom-c {
-    background: url('/images/logo/logo-ray-gray.svg') no-repeat scroll 20vw 110% transparent;
+    background: url('/images/backgrounds/icon-patterm-02.svg') repeat scroll top left transparent;
+    background-size: 200px;
     padding: var(--space-3xl) 0;
+    position: relative;
+    &:before {
+        content: '';
+        background-image: linear-gradient(white, rgba(255, 255, 255, 0));
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+    .u-grid {
+        background-color: #fff;
+        padding: var(--space-l) 0;
+        border-radius: 8px;
+        box-shadow: f.$shadow-container;
+        z-index: 10;
+    }
     // Layout
     .module-form {
         grid-column: 2 / 14;
@@ -389,13 +415,58 @@
             margin: var(--space-s) auto;
             padding: var(--space-s);
             background-color: #fff;
-            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.14),
-            0 4px 2px rgba(0, 0, 0, 0.14),
-            0 8px 4px rgba(0, 0, 0, 0.07),
-            0 8px 8px rgba(0, 0, 0, 0.07);
+
         }
     }
 }
+
+// --> FOOTER
+
+.footer {
+    background: url('/images/backgrounds/wave-black.jpg') no-repeat scroll center center transparent;
+    background-size: cover;
+    margin-top: 0;
+    .grid-child {
+        flex-flow: column wrap;
+        .footer-address {
+            color: var(--gray-900);
+            margin-bottom: var(--space-m);
+            img {margin-bottom: var(--space-s);}
+            a {
+                color: var(--secondary-500);
+                transition: all 0.5s ease-in-out;   
+                text-decoration: none;
+                border-bottom: none;
+                font-size: var(--step--1) !important;
+                &:hover {
+                    color: var(--secondary-700);        
+                    text-decoration: none !important;
+                }
+            }
+            p {
+                color: var(--gray-900);
+                margin-bottom: 0;
+                font-size: var(--step--1) !important;
+            }
+        }
+        .footer-menu {
+            margin-bottom: 0;
+            li a {
+                color: var(--secondary-500);
+            }
+        }
+        .footer-copyright {
+            margin-top: var(--space-m);
+            text-align: center;
+            font-size: var(--step--1);
+            .footer2 {
+                font-size: var(--step--2);
+                color: var(--gray-600);
+            }
+        }
+    }
+}
+
 
 @media screen and (min-width: 600px) {
     // ---> Banner
@@ -460,6 +531,7 @@
         }
         .section--qrscan {
             grid-area: c;
+            justify-content: center;
         }
         .section--contatti {
             grid-area: b;
@@ -551,6 +623,22 @@
         }
         .cta__contacts {
             flex: 1 0 0;
+        }
+    }
+    // ---> CONTATTI
+    .cta__content {
+        .btn--cta {
+            max-width: none;
+            font-size: var(--step-2);
+        }
+    }
+    .cta__contacts {
+        .section--qrscan {display: none !important;}
+        .section--contatti {
+            h5 {margin-top: var(--space-xs);}
+            p, a {
+                font-size: var(--step--1) !important;
+            }
         }
     }
 }

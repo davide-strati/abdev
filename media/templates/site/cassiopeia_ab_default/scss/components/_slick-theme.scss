@@ -106,6 +106,8 @@ $arrow-dim: 50px;
 
 .slick-prev {
     left: 0px;
+    z-index: 200;
+
     [dir="rtl"] & {
         left: auto;
         right: -25px;

@@ -1,2 +1,11 @@
 @use 'foundation';
 @use 'components';
+
+
+// --> FOOTER
+
+.footer {
+    background-color: var(--gray-100);
+    background-image: none;
+    margin-top: 0;
+}

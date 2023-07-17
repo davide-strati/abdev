@@ -1,6 +1,5 @@
 /* ---------- COLORS --------------- */
 
-
 /* Color styles */
 :root {
   --primary-100: rgba(68, 112, 0, 1);
@@ -45,20 +44,18 @@
 }
 
 // Bootstrap overrides
-$primary:       var(--primary-600) !default;
+$primary: var(--primary-600) !default;
 $primary-hover: var(--primary-400) !default;
-$secondary:     var(--gray-700) !default;
-$success:       var(--success) !default;
-$warning:       var(--warning) !default;
-$danger:        var(--alert) !default;
-$light:         var(--gray-800) !default;
-$dark:          var(--gray-200) !default;
+$secondary: var(--gray-700) !default;
+$success: var(--success) !default;
+$warning: var(--warning) !default;
+$danger: var(--alert) !default;
+$light: var(--gray-800) !default;
+$dark: var(--gray-200) !default;
 
 // Gradients
-$grad-green-light: radial-gradient(117.18% 85.73% at 0% -8.7%, #E9FB74 0%, #D3F20A 100%);
-$grd-gray-dark:  radial-gradient(117.18% 85.73% at 0% -8.7%, #494F69 0%, #33354C 0%, #1D1E30 100%);
-
-
+$grad-green-light: radial-gradient(117.18% 85.73% at 0% -8.7%, #e9fb74 0%, #d3f20a 100%);
+$grd-gray-dark: radial-gradient(117.18% 85.73% at 0% -8.7%, #494f69 0%, #33354c 0%, #1d1e30 100%);
 
 /* ----------------------------------------------------------------------------------------------- */
 /* ------------------------------------------- UTOPIA -------------------------------------------- */
@@ -68,8 +65,8 @@ $grd-gray-dark:  radial-gradient(117.18% 85.73% at 0% -8.7%, #494F69 0%, #33354C
 /* @link https://utopia.fyi/type/calculator?c=320,14,1.2,1240,20,1.25,8,2,&s=0.75|0.5|0.25,1.25|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-  --step--2: clamp(0.61rem, calc(0.56rem + 0.24vw), 0.80rem);
-  --step--1: clamp(0.73rem, calc(0.66rem + 0.34vw), 1.00rem);
+  --step--2: clamp(0.61rem, calc(0.56rem + 0.24vw), 0.8rem);
+  --step--1: clamp(0.73rem, calc(0.66rem + 0.34vw), 1rem);
   --step-0: clamp(0.88rem, calc(0.78rem + 0.47vw), 1.25rem);
   --step-1: clamp(1.05rem, calc(0.92rem + 0.64vw), 1.56rem);
   --step-2: clamp(1.26rem, calc(1.09rem + 0.87vw), 1.95rem);
@@ -87,26 +84,26 @@ $grd-gray-dark:  radial-gradient(117.18% 85.73% at 0% -8.7%, #494F69 0%, #33354C
 :root {
   --space-3xs: clamp(0.25rem, calc(0.23rem + 0.11vw), 0.31rem);
   --space-2xs: clamp(0.44rem, calc(0.37rem + 0.33vw), 0.63rem);
-  --space-xs: clamp(0.69rem, calc(0.60rem + 0.43vw), 0.94rem);
+  --space-xs: clamp(0.69rem, calc(0.6rem + 0.43vw), 0.94rem);
   --space-s: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
   --space-m: clamp(1.13rem, calc(0.97rem + 0.76vw), 1.56rem);
-  --space-l: clamp(1.75rem, calc(1.49rem + 1.30vw), 2.50rem);
+  --space-l: clamp(1.75rem, calc(1.49rem + 1.3vw), 2.5rem);
   --space-xl: clamp(2.63rem, calc(2.23rem + 1.96vw), 3.75rem);
-  --space-2xl: clamp(3.50rem, calc(2.98rem + 2.61vw), 5.00rem);
-  --space-3xl: clamp(5.25rem, calc(4.47rem + 3.91vw), 7.50rem);
+  --space-2xl: clamp(3.5rem, calc(2.98rem + 2.61vw), 5rem);
+  --space-3xl: clamp(5.25rem, calc(4.47rem + 3.91vw), 7.5rem);
 
   /* One-up pairs */
   --space-3xs-2xs: clamp(0.25rem, calc(0.12rem + 0.65vw), 0.63rem);
   --space-2xs-xs: clamp(0.44rem, calc(0.26rem + 0.87vw), 0.94rem);
   --space-xs-s: clamp(0.69rem, calc(0.49rem + 0.98vw), 1.25rem);
-  --space-s-m: clamp(0.88rem, calc(0.64rem + 1.20vw), 1.56rem);
-  --space-m-l: clamp(1.13rem, calc(0.65rem + 2.39vw), 2.50rem);
+  --space-s-m: clamp(0.88rem, calc(0.64rem + 1.2vw), 1.56rem);
+  --space-m-l: clamp(1.13rem, calc(0.65rem + 2.39vw), 2.5rem);
   --space-l-xl: clamp(1.75rem, calc(1.05rem + 3.48vw), 3.75rem);
-  --space-xl-2xl: clamp(2.63rem, calc(1.80rem + 4.13vw), 5.00rem);
-  --space-2xl-3xl: clamp(3.50rem, calc(2.11rem + 6.96vw), 7.50rem);
+  --space-xl-2xl: clamp(2.63rem, calc(1.8rem + 4.13vw), 5rem);
+  --space-2xl-3xl: clamp(3.5rem, calc(2.11rem + 6.96vw), 7.5rem);
 
   /* Custom pairs */
-  --space-s-l: clamp(0.88rem, calc(0.31rem + 2.83vw), 2.50rem);
+  --space-s-l: clamp(0.88rem, calc(0.31rem + 2.83vw), 2.5rem);
 }
 
 $section-padding-top: var(--space-3xl);
@@ -117,13 +114,12 @@ $button-padding-x: var(--space-l);
 $button-margin-x: var(--space-m);
 $button-margin-y: var(--space-xl);
 
-
 // ---> Grid
 /* @link https://utopia.fyi/grid/calculator?c=320,14,1.2,1240,20,1.25,8,2,&s=0.75|0.5|0.25,1.25|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-  --grid-max-width: 77.50rem;
-  --grid-gutter: var(--space-s-l, clamp(0.88rem, calc(0.31rem + 2.83vw), 2.50rem));
+  --grid-max-width: 77.5rem;
+  --grid-gutter: var(--space-s-l, clamp(0.88rem, calc(0.31rem + 2.83vw), 2.5rem));
   --grid-columns: 12;
 }
 
@@ -138,7 +134,7 @@ $button-margin-y: var(--space-xl);
   gap: var(--grid-gutter);
   max-width: var(--grid-max-width);
   margin: 0 auto;
-  grid-template-columns: [full-start] minmax(0,1fr) [main-start] repeat(12,minmax(0,60px)) [main-end] minmax(0,1fr) [full-end];
+  grid-template-columns: [full-start] minmax(0, 1fr) [main-start] repeat(12, minmax(0, 60px)) [main-end] minmax(0, 1fr) [full-end];
 }
 
 .bg--dark {
@@ -149,20 +145,26 @@ $button-margin-y: var(--space-xl);
 :root {
   --header-logo-height: 50px;
   --header-height: calc(var(--header-logo-height) + (var(--space-s) * 2));
-
 }
 
 @media screen and (min-width: 768px) {
   :root {
     // -> Layout / Header
-      --header-logo-height: 70px;
+    --header-logo-height: 70px;
   }
-
 }
+
+// ---> Backgrounds
+
+$button-background--gray: radial-gradient(117.18% 85.73% at 0% -8.7%, #494f69 0%, #33354c 0%, #1d1e30 100%);
+$button-background--gray--hover: radial-gradient(117.18% 85.73% at 0% -8.7%, #525561 0%, #1D1E30 100%);
 
 // ---> Shadows
 
-$shadow-container: 0 2px 1px rgba(0, 0, 0, 0.14),
-0 4px 2px rgba(0, 0, 0, 0.14),
-0 8px 4px rgba(0, 0, 0, 0.07),
-0 8px 8px rgba(0, 0, 0, 0.07);
+$shadow-container: 0 2px 1px rgba(0, 0, 0, 0.14), 0 4px 2px rgba(0, 0, 0, 0.14), 0 8px 4px rgba(0, 0, 0, 0.07),
+  0 8px 8px rgba(0, 0, 0, 0.07);
+
+$shadow-button: 0px 4px 7px rgba(0, 0, 0, 0.27), 0px 1.6711px 2.92443px rgba(0, 0, 0, 0.194091),
+  0px 0.893452px 1.56354px rgba(0, 0, 0, 0.160949), 0px 0.500862px 0.876509px rgba(0, 0, 0, 0.135),
+  0px 0.266004px 0.465507px rgba(0, 0, 0, 0.109051), 0px 0.11069px 0.193708px rgba(0, 0, 0, 0.0759093);
+  $shadow-button--hover:  0px 9px 39px rgba(0, 0, 0, 0.18), 0px 3.75998px 16.2933px rgba(0, 0, 0, 0.129394), 0px 2.01027px 8.71116px rgba(0, 0, 0, 0.107299), 0px 1.12694px 4.88341px rgba(0, 0, 0, 0.09), 0px 0.598509px 2.59354px rgba(0, 0, 0, 0.0727007), 0px 0.249053px 1.07923px rgba(0, 0, 0, 0.0506062);

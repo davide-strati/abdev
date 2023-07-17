@@ -128,7 +128,8 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
     . $hasClass
     . ($this->direction == 'rtl' ? ' rtl' : '');
 ?>">
-    <header class="ab-header header container-header full-width<?php echo $stickyHeader ? ' ' . $stickyHeader : ''; ?>">
+	<header
+		class="ab-header header container-header d-flex flex-xolumn justify-content-center full-width<?php echo $stickyHeader ? ' ' . $stickyHeader : ''; ?>">
 
         <?php if ($this->countModules('topbar')) : ?>
             <div class="container-topbar">
@@ -142,20 +143,29 @@ $wa->getAsset('style', 'fontawesome')->setAttribute('rel', 'lazy-stylesheet');
             </div>
         <?php endif; ?>
 
-        <?php if ($this->params->get('brand', 1)) : ?>
-            <div class="grid-child">
+		<?php if ($this->params->get('brand', 1) || $this->countModules('menu', true)) : ?>
+		<div class="u-grid">
                 <div class="navbar-brand">
-                    <a class="brand-logo" href="<?php echo $this->baseurl; ?>/">
+				<a class="brand-logo"
+					href="<?php echo $this->baseurl; ?>/">
                         <?php echo $logo; ?>
                     </a>
                     <?php if ($this->params->get('siteDescription')) : ?>
-                        <div class="site-description"><?php echo htmlspecialchars($this->params->get('siteDescription')); ?></div>
+				<div class="site-description">
+					<?php echo htmlspecialchars($this->params->get('siteDescription')); ?>
+				</div>
                     <?php endif; ?>
                 </div>
+			<?php if ($this->countModules('menu', true)) : ?>
+			<div class="container-nav">
+				<jdoc:include type="modules" name="menu" style="none" />
+			</div>
+
+			<?php endif; ?>
             </div>
         <?php endif; ?>
 
-        <?php if ($this->countModules('menu', true) || $this->countModules('search', true)) : ?>
+		<?php if ($this->countModules('search', true)) : ?>
             <div class="grid-child container-nav">
                 <?php if ($this->countModules('menu', true)) : ?>
                     <jdoc:include type="modules" name="menu" style="none" />

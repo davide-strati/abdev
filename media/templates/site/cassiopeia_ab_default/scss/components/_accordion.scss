@@ -21,7 +21,7 @@ $labelActvieLight: var(--primary-600);
     gap: var(--space-s);
     background-color: transparent;
     color: $labelDefault;
-    font-size: var(--step-1);
+    font-size: var(--step-0);
     font-family: t.$heading-extrabold;
 
     .light-bg & {
@@ -34,42 +34,45 @@ $labelActvieLight: var(--primary-600);
 }
 
 // ---> Label with Icon, use css mask to change color/icon
-.accordion-header__icon {
+.accordion-header button:before {
     flex: 0 0 var(--space-l);
     height: var(--space-l);
     background-color: $labelDefault;
+    content: '';
+    width: 20px;
+    mask-repeat: no-repeat;
 
-    &.icon--progetto {
-        mask-image: url('/images/icons/servizi/gray/progetto.svg');
+    .icon--progetto & {
+        mask-image: url('/images/icons/servizi/gray/progetto.svg');        
     }
 
-    &.icon--accumulo {
+    .icon--accumulo & {
         mask-image: url('/images/icons/servizi/gray/sistemi-accumulo.svg');
     }
 
-    &.icon--installazione {
+    .icon--installazione & {
         mask-image: url('/images/icons/servizi/gray/pannello-solare.svg');
     }
 
-    &.icon--pompe {
+    .icon--pompe & {
         mask-image: url('/images/icons/servizi/gray/pompe-calore.svg');
     }
 
-    &.icon--consulenza {
+    .icon--consulenza & {
         mask-image: url('/images/icons/servizi/gray/burocrazia.svg');
     }
 
-    &.icon--assistenza {
+    .icon--assistenza & {
         mask-image: url('/images/icons/servizi/gray/assistenza.svg');
     }
 
-    &.icon--consumi {
+    .icon--consumi & {
         mask-image: url('/images/icons/servizi/gray/consumi.svg');
     }
-    &.icon--ricarica {
+    .icon--ricarica & {
         mask-image: url('/images/icons/servizi/gray/colonnine.svg');
     }
-    &.icon--terreni {
+    .icon--terreni & {
         mask-image: url('/images/icons/servizi/gray/fotovoltaico.svg');
     }
 
